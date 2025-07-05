@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She safe.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;900&family=Raleway:wght@400;500&family=Itim&family=Alegreya:wght@400;800&family=Caramel&family=Aquafina+Script&family=Instrument+Serif&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+    <style>
+        .section-block {
+            display:none;
+        }
+
+        .section-block.active {
+            display: block;
+        }
+    </style>
+    
+</head>
+<body>
+
+
+
+
+
+
+
+    <header>
+<div class="wrapper">
+   <div class="she-safe">
+  <img src="{{ url_for('static', filename='images/She safe logo[1] copy 2.png')}}" alt="She Safe Logo" style="width: 120px; height: auto; position: absolute; top: 20px; left: 20px; z-index: 10;">
+</div>
+    
+     <nav >
+        
+        <ul style="margin-top: 80px;">
+          
+
+            <li>
+                <a href="{{ url_for('product')}}" class="btn white" >Products</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('solutions')}}">Solutions</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('community')}}">Community</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('resources')}}">Resources</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('contact')}}">Contact</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('twilio_page')}}">Link</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('login')}}" target="_blank" class="btn white">Sign In</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('register')}}" class="btn dark">Register</a>
+            </li>
+            
+        </ul>
+    </nav>
+    <!--End of navigation menu-->
+
+    <div class="hero-section">
+        <div class="left">
+            <h1 class="text-up">"Break the Silence, End the Violence"<br>
+                "Safe Women, Strong Nation."</h1>
+
+                <a href="{{ url_for('explore')}}" class="btn white">explore</a>
+        </div>
+
+        <div class="right">
+            <p class="faded-text">She Safe</p>
+
+
+<style>
+    .faded-text {
+        font-size: 128px;
+        font-weight: bold;
+        color: black;
+        opacity: 0.17; /* 17% opacity */
+    }
+</style>
+           
+            <img src="{{ url_for('static', filename='images/women.png')}}" alt="" class="hero-image" >
+           
+           
+
+            
+        </div>
+        <div class="background">
+
+        </div>
+
+    </div>
+</div>
+
+
+    </header>
+    <section class="navbar-intro">
+  <h2>Explore the SheSafe Features</h2>
+  <p>Below are the features linked with each button of the navbar for your quick understanding.</p>
+</section>
+    <section class="info">
+  <div class="content-wrapper">
+
+    <!-- Left Side -->
+    <div class="feature-block">
+      <div class="feature-card">
+        <h3>Products</h3>
+        <p>List of safety devices</p>
+      </div>
+      <div class="feature-card">
+        <h3>Solutions</h3>
+        <p>Women safety & empowerment schemes (UP, Bihar, Uttarakhand, Haryana)</p>
+      </div>
+      <div class="feature-card">
+        <h3>Community</h3>
+        <p>Proud women’s of our nation</p>
+      </div>
+      <div class="feature-card">
+        <h3>Resources</h3>
+        <p>Legal help & Rights awareness</p>
+      </div>
+    </div>
+
+    <!-- Center Logo -->
+    <div class="logo-area">
+      <img src="{{ url_for('static',filename='images/She safe logo[1] copy 2.png')}}" alt="SheSafe Logo" />
+    </div>
+
+    <!-- Right Side -->
+    <div class="feature-block">
+      <div class="feature-card">
+        <h3>Contact</h3>
+        <p>Contact Us, Report Incident, Feedback Form</p>
+      </div>
+      <div class="feature-card">
+        <h3>Link</h3>
+        <p>Twilio alert feature (SMS + Call)</p>
+      </div>
+      <div class="feature-card">
+        <h3>Sign In</h3>
+        <p>Login / Signup options</p>
+      </div>
+      <div class="feature-card">
+        <h3>Register</h3>
+        <p>Register a SafePlace</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!--End of the header section -->
+<div class="section-wrapper section-block active" id="section-1">
+    <div class="about-section">
+        <div class="about-container">
+            <h2>About Us</h2>
+            
+            <p>Empowering women with safety, confidence, and peace of mind. Our app is designed to prioritize women’s security in every
+                situation, whether at home, work, or on the move. With features like real-time location sharing, emergency SOS alerts, and 
+               community support networks, we provide tools that keep women connected and safeguarded.
+               Our mission is to create a world where technology bridges the gap between vulnerability and empowerment. Whether it’s a
+                late-night commute, an unfamiliar neighborhood, or seeking trusted contacts, we’ve got you covered. Together, let’s make
+                safety simple, accessible, and proactive.</p>
+                <li>
+                    <a href="#" class="btn pink continue-btn">continue reading</a>
+                </li>
+        </div>
+        </div>
+        
+    </div>
+
+<!--End of the about section -->
+<div class="section-wrapper section-block" id="section-2">
+<div class="social-section">
+    <div class="social-container">
+        <h2>Social Data</h2>
+        <p><b>Education:</b>In India, 86.5% of girls complete lower secondary school, which is higher than the average for South Asia
+            and other lower-middle-income countries. However, adult literacy among women in India is 70%, which is lower than
+            the global average.</p>
+        <p><b>Labor Force Participation:</b> Globally, women’s labor force participation is often lower than men’s. In India,
+            only 31.2% of women participate in the labor force compared to 76.8% of men.</p>
+        <p><b>Violence Against Women:</b> In India, 18.4% of women aged 15–49 reported experiencing physical or sexual
+            violence by a partner in the past year (as of 2018)</p>
+        <p><b>Political Representation:</b> Women hold only 14.7% of seats in India’s parliament, reflecting the global challenge
+            of achieving gender parity in political representation.</p>
+        <p><b>Global Perspective:</b> The UN Declaration on the Elimination of Violence Against Women highlights that such crimes stem
+            from historically imbalanced power dynamics between genders</p>
+        <a href="#" class="btn pink continue-btn">Continue Reading</a>
+    </div>
+    </div>
+</div>
+
+<!--End of resources section-->
+<div class="section-wrapper section-block" id="section-3">
+<div class="solution-section">
+    <div class="solution-container">
+        <h2><b>Solutions and Initiatives</b><hr></h2>
+        <h2><b>Government Initiatives in India:</b></h2><p>The "Nirbhaya" Fund was established to support projects aimed at enhancing women’s safety.
+            The Women Safety Division under the Ministry of Home Affairs focuses on strategic planning and execution of
+                     safety measures.</p>
+        <h2><b>Role of Technology:</b></h2><p>Safety apps like SOS alerts, GPS tracking, and community-driven platforms are empowering women to feel more
+            secure<br>smart devices and wearable tech are also being developed to provide real-time assistance.</p>
+        <h2><b>Challenges:</b></h2><p>Despite legal frameworks, societal attitudes and delayed justice remain significant barriers.
+            Public spaces often lack adequate safety measures, leading to widespread fear among women.
+            </p>
+        <h2><b>Global Perspective:</b></h2><p>Countries like Denmark and Switzerland are considered safer for women due to robust laws and societal norms.
+            India ranks 128th out of 177 countries in the Women Peace and Security Index, reflecting the need for improvement</p>
+</div>
+</div>
+    
+    
+</div>
+<!--End of solutions and initiatives section-->
+<div class="imp-link">
+    <nav>
+        <h3>
+            <b>Important Link</b>
+        </h3>
+        
+
+            <li>
+                <a href="{{url_for('buddy')}}" class="btn blue">Your-buddy</a>
+            </li>
+            
+        </nav>
+</div>
+
+<div class="ourapp">
+    <section class="app">
+        <h3><b>Get our App</b></h3>
+        <p>You can use our App for better experience on smartphones</p>
+        <div class="app-buttons">
+            <div class="app-btn">
+                <img src="{{ url_for('static',filename='images/playstore.svg')}}" alt="">
+                <span>Google play store</span>
+            </div>
+        </div>
+    </section>
+</div>
+<!--end of app section-->
+<footer>
+    <div class="wrapper">
+        <div class="links-container">
+            <div class="links">
+                <h3>Quick Links</h3>
+
+                    <ul>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ url_for('contact')}}">Contact Us</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ url_for('privacy')}}">Privacy policy</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ url_for('terms')}}">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                 </div>
+
+                 <div class="links">
+                    <h3>Contact Us</h3>
+    
+                        <ul>
+                            <li>
+                                from.iitpatna@gmail.com
+                            </li>
+                        </ul>
+
+                        <div class="social">
+                            <a href="https://www.instagram.com/priyanshukumar18_?igsh=MXZ6ZGZlNDNjNzFuaw==">
+                                <img src="{{ url_for('static',filename='images/insta.svg')}}" alt="">
+                            </a>
+                        </div>
+
+                        <form action="#">
+                            <input type="text" placeholder="Email Address">
+                            <button class="submit-btn">Send</button>
+                        </form>
+                     </div>
+        </div>
+        <p class="copyright">This website is developed by GROUP-33 © 2025</p>
+    </div>
+</footer>
+
+
+    <script>
+    const sections = document.querySelectorAll('.section-wrapper');
+    const buttons = document.querySelectorAll('.continue-btn');
+    let currentIndex = 0;
+
+    buttons.forEach((btn, index) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex++;
+            if (sections[currentIndex]) {
+                sections[currentIndex].classList.add('active');
+            }
+        });
+    });
+</script>
+    
+</body>
+</html>

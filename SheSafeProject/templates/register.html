@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register a Safe Space – SheSafe</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 550px;
+      background: #ffffff1c;
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background: #ffffffcc;
+      color: #333;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.05);
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Register a Safe Space</h1>
+    <form action="https://formsubmit.co/from.iitpatna@gmail.com" method="POST">
+      <input type="text" name="place_name" placeholder="Place Name" required>
+      <input type="text" name="address" placeholder="Full Address" required>
+      <input type="text" name="state" placeholder="State" required>
+      <input type="text" name="pincode" placeholder="Pincode" required>
+      <input type="text" name="contact_person" placeholder="Contact Person (optional)">
+      <textarea name="reason" placeholder="Why is this place considered safe?" required></textarea>
+      <label>
+        <input type="checkbox" required>
+        I confirm this information is correct
+      </label>
+      <input type="submit" value="Submit Safe Space">
+    </form>
+  </div>
+</body>
+</html>

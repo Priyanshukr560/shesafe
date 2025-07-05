@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f7c6f5, #c7aef9);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: #4a006e;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: #800080;
+  margin-bottom: 15px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.card th, .card td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.card th {
+  background: #ffc6ec;
+  color: #4a004d;
+}

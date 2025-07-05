@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women Safety Schemes</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fdf2f8, #fff7ed);
+      font-family: 'Inter', sans-serif;
+    }
+    .tab-active {
+      background-color: #ec4899;
+      color: white !important;
+      box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.2);
+    }
+    .tab-btn {
+      transition: all 0.3s ease;
+    }
+    .tab-btn:hover {
+      transform: scale(1.05);
+    }
+    .card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 2.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.07);
+      transition: all 0.4s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
+    }
+    h1 span {
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(to right, #ec4899, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+  <script>
+    function showTab(stateId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-btn');
+      tabs.forEach(tab => tab.classList.add('hidden'));
+      buttons.forEach(btn => btn.classList.remove('tab-active'));
+      document.getElementById(stateId).classList.remove('hidden');
+      document.getElementById('btn-' + stateId).classList.add('tab-active');
+    }
+    window.onload = () => showTab('up');
+  </script>
+</head>
+<body class="text-gray-800">
+  <div class="max-w-7xl mx-auto py-14 px-6">
+    <h1 class="text-5xl font-extrabold text-center mb-12">
+      <span>Women Safety & Empowerment Schemes</span>
+    </h1><!-- Tabs -->
+<div class="flex justify-center flex-wrap gap-4 mb-12">
+  <button id="btn-up" onclick="showTab('up')" class="tab-btn px-6 py-2.5 bg-white text-pink-600 font-semibold border border-pink-300 rounded-full shadow-sm hover:bg-pink-100">Uttar Pradesh</button>
+  <button id="btn-bihar" onclick="showTab('bihar')" class="tab-btn px-6 py-2.5 bg-white text-yellow-600 font-semibold border border-yellow-300 rounded-full shadow-sm hover:bg-yellow-100">Bihar</button>
+  <button id="btn-uttarakhand" onclick="showTab('uttarakhand')" class="tab-btn px-6 py-2.5 bg-white text-green-600 font-semibold border border-green-300 rounded-full shadow-sm hover:bg-green-100">Uttarakhand</button>
+  <button id="btn-haryana" onclick="showTab('haryana')" class="tab-btn px-6 py-2.5 bg-white text-blue-600 font-semibold border border-blue-300 rounded-full shadow-sm hover:bg-blue-100">Haryana</button>
+</div>
+
+<!-- Tab Content -->
+<div class="grid gap-10">
+  <div id="up" class="tab-content card">
+    <h2 class="text-2xl font-bold text-pink-600 mb-4">Uttar Pradesh</h2>
+    <ul class="space-y-4 list-disc list-inside">
+      <li><strong>Chief Minister Kanya Sumangala Yojana:</strong> Supports girl child from birth to graduation. <a href="https://www.indiatvnews.com/uttar-pradesh/cm-kanya-sumangala-yojana-to-181-helpline-women-welfare-schemes-by-up-govt-that-go-an-extra-mile-2024-12-27-968173" class="text-blue-600 underline">Official Link</a></li>
+      <li><strong>Mission Shakti:</strong> Empowers women via awareness, legal & medical support. <a href="https://upmissionshakti.in/" class="text-blue-600 underline">Official Website</a></li>
+      <li><strong>Safe City Project:</strong> Surveillance & pink booths for urban safety. <a href="https://www.hindustantimes.com/cities/lucknow-news/up-launches-safe-city-project-to-ensure-women-safety-101700587412809.html" class="text-blue-600 underline">Read More</a></li>
+      <li><strong>She-Box:</strong> Online complaint system for workplace sexual harassment. <a href="https://shebox.wcd.gov.in/" class="text-blue-600 underline">Report Here</a></li>
+      <li><strong>One Stop Centres:</strong> Support for victims: legal, medical, shelter. <a href="https://pinkshakti.in/onestopdata.php" class="text-blue-600 underline">District List</a></li>
+      <li><strong>Women’s Shelters & Hostels:</strong> Shelter with legal/vocational support. <a href="https://mahilakalyan.up.nic.in/en/Institution_Women.aspx" class="text-blue-600 underline">Explore</a></li>
+      <li><strong>Legal Aid:</strong> Free legal help for dowry/domestic violence cases. <a href="https://services.india.gov.in/service/detail/apply-for-legal-aid-for-women-victims-of-dowry-practice-uttar-pradesh" class="text-blue-600 underline">Apply</a></li>
+    </ul>
+  </div>
+
+  <div id="bihar" class="tab-content hidden card">
+    <h2 class="text-2xl font-bold text-yellow-600 mb-4">Bihar</h2>
+    <ul class="space-y-4 list-disc list-inside">
+      <li><strong>Mukhyamantri Kanya Suraksha Yojana:</strong> ₹2000 to BPL families for girl child's birth. <a href="https://wcdc.bihar.gov.in/MKSYDetails" class="text-blue-600 underline">Link</a></li>
+      <li><strong>181 Women Helpline:</strong> 24x7 support for rescue, legal aid. <a href="https://wcdc.bihar.gov.in/181MahilaHelpline" class="text-blue-600 underline">Helpline</a></li>
+      <li><strong>Pink Buses:</strong> Safe public transport for women in cities. <a href="https://timesofindia.indiatimes.com/city/patna/cm-to-launch-the-pink-bus-services-in-six-cities-today/articleshow/121193366.cms" class="text-blue-600 underline">Info</a></li>
+      <li><strong>Bandhan Tod App:</strong> Alerts authorities to prevent child marriage. <a href="https://indianexpress.com/article/india/bandhan-tod-app-comes-to-the-rescue-of-bihar-schoolgirl-4965717/" class="text-blue-600 underline">More</a></li>
+      <li><strong>State Women Commission:</strong> Legal redressal & rights protection. <a href="https://mahilaayogbihar.in/" class="text-blue-600 underline">Visit</a></li>
+    </ul>
+  </div>
+
+  <div id="uttarakhand" class="tab-content hidden card">
+    <h2 class="text-2xl font-bold text-green-600 mb-4">Uttarakhand</h2>
+    <ul class="space-y-4 list-disc list-inside">
+      <li><strong>Swadhar Greh:</strong> Shelter, food & rehab for women in distress. <a href="https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1809697" class="text-blue-600 underline">Info</a></li>
+      <li><strong>State Women Commission:</strong> Handles injustice & grievance redressal. <a href="https://ukscw.org.in/" class="text-blue-600 underline">Visit</a></li>
+      <li><strong>Uniform Civil Code:</strong> Gender-neutral laws for all communities. <a href="https://ucc.uk.gov.in/" class="text-blue-600 underline">Read</a></li>
+    </ul>
+  </div>
+
+  <div id="haryana" class="tab-content hidden card">
+    <h2 class="text-2xl font-bold text-blue-600 mb-4">Haryana</h2>
+    <ul class="space-y-4 list-disc list-inside">
+      <li><strong>181 Helpline:</strong> Emergency help & counseling. <a href="https://wcdhry.gov.in/women-helpline-number-181/" class="text-blue-600 underline">Info</a></li>
+      <li><strong>Acid Attack Relief:</strong> Compensation & legal/medical support. <a href="https://wcdhry.gov.in/schemes-for-women/scheme-for-relief-and-rehabilitation-of-women-acid-victims/" class="text-blue-600 underline">Link</a></li>
+      <li><strong>Saheli Scheme:</strong> Prenatal care support by women volunteers. <a href="https://www.prharyana.gov.in/en/press-note-52" class="text-blue-600 underline">Info</a></li>
+      <li><strong>112 ERSS:</strong> AI-based emergency response service. <a href="https://www.digitalhealthnews.com/ai-to-power-haryana-s-112-emergency-response-from-july" class="text-blue-600 underline">Read</a></li>
+      <li><strong>One Stop Centres:</strong> Legal & shelter help to victims. <a href="https://wcdhry.gov.in/schemes-for-women/onestop-centre/" class="text-blue-600 underline">Visit</a></li>
+      <li><strong>Aapki Beti Hamari Beti:</strong> ₹21,000 incentive for girl child. <a href="https://wcdhry.gov.in/schemes-for-children/abhb/" class="text-blue-600 underline">Info</a></li>
+    </ul>
+  </div>
+</div>
+
+  </div>
+</body>
+</html>

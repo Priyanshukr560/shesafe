@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buddy Connect - SheSafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+      color: #fff;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .button-container button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: #f39c12;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button-container button:hover {
+      background: #e67e22;
+    }
+
+    .form-container {
+      background: #fff;
+      color: #333;
+      border-radius: 15px;
+      padding: 25px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+
+    .form-container.active {
+      display: block;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    form button {
+      width: 100%;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #2980b9;
+    }
+
+    .suggestion-entry {
+      background: #f2f2f2;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    #suggestionsContainer {
+      margin-top: 20px;
+      display: none;
+    }
+
+    #suggestionsContainer.active {
+      display: block;
+    }
+
+    #showSuggestionsBtn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #16a085;
+      color: #fff;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    #showSuggestionsBtn:hover {
+      background: #138d75;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Buddy Connect – SheSafe</h1>
+
+  <div class="button-container">
+    <button onclick="showForm('registerForm')">Register as Buddy</button>
+    <button onclick="showForm('findForm')">Find Your Buddy</button>
+  </div>
+
+  <!-- Register Form -->
+  <div id="registerForm" class="form-container">
+    <form method="POST" action="/register_buddy">
+      <h2 style="text-align: center; color: #2c3e50;">Register as Buddy</h2>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="location" placeholder="Your Location" required />
+      <input type="tel" name="contact" placeholder="Your Contact Number" required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Find Form -->
+  <div id="findForm" class="form-container">
+    <form method="POST" action="/find_buddy">
+      <h2 style="text-align: center; color: #2c3e50;">Find a Buddy</h2>
+      <input type="text" name="current_location" placeholder="Your Current Location" required />
+      <input type="text" name="destination" placeholder="Your Destination" required />
+      <button type="submit">Search Buddy</button>
+    </form>
+
+    <!-- Suggestions Button -->
+    <div style="text-align: center;">
+      <button type="button" id="showSuggestionsBtn" onclick="toggleSuggestions()">Show Suggestions</button>
+    </div>
+
+    <!-- Suggestions List -->
+    <div id="suggestionsContainer">
+      <div class="suggestion-entry">
+        <strong>Priyanshu Kumar</strong><br>
+        📍 Location: MIT-USA<br>
+        📞 Contact: ABCD
+      </div>
+      <div class="suggestion-entry">
+        <strong>Pradeep Kumar</strong><br>
+        📍 Location: Rudrapur<br>
+        📞 Contact: EFGH
+      </div>
+      <div class="suggestion-entry">
+        <strong>Ansh Raj</strong><br>
+        📍 Location: IIT-Patna<br>
+        📞 Contact: 00000000
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showForm(formId) {
+      document.getElementById('registerForm').classList.remove('active');
+      document.getElementById('findForm').classList.remove('active');
+      document.getElementById('suggestionsContainer').classList.remove('active');
+      document.getElementById(formId).classList.add('active');
+    }
+
+    function toggleSuggestions() {
+      const container = document.getElementById('suggestionsContainer');
+      container.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

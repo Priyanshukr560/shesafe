@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Government Scheme Eligibility Checker</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/explore.css')}}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Scheme Eligibility Checker for Women</h1>
+    <form method="POST">
+      <label>Age:</label>
+      <input type="number" name="age" required />
+
+      <label>Annual Income (in ₹):</label>
+      <input type="number" name="income" required />
+
+      <label>State:</label>
+      <select name="state" required>
+        <option value="Bihar">Bihar</option>
+        <option value="UP">UP</option>
+        <option value="MP">MP</option>
+        <option value="Haryana">Haryana</option>
+      </select>
+
+      <label>Gender:</label>
+      <select name="gender" required>
+        <option value="female">Female</option>
+      </select>
+
+      <label>Marital Status:</label>
+      <select name="marital_status" required>
+        <option value="unmarried">Unmarried</option>
+        <option value="married">Married</option>
+        <option value="widow">Widow</option>
+        <option value="divorced_or_abandoned">Divorced / Abandoned</option>
+        <option value="any">Other</option>
+      </select>
+
+      <label>Education Level:</label>
+      <select name="education_level" required>
+        <option value="any">Any</option>
+        <option value="class10_passed">Class 10 Passed</option>
+        <option value="12_passed_or_above">Class 12 Passed</option>
+        <option value="graduate">Graduate</option>
+      </select>
+
+      <label>Religion:</label>
+      <input type="text" name="religion" placeholder="e.g. Muslim (optional)" />
+
+      <label>Are you currently pregnant?</label>
+      <input type="radio" name="pregnant" value="yes"> Yes
+      <input type="radio" name="pregnant" value="no" checked> No
+
+      <br /><br />
+      <button type="submit">Check Eligibility</button>
+    </form>
+
+    {% if eligible %}
+      <h2>🎉 You are eligible for the following schemes:</h2>
+      {% for scheme in eligible %}
+        <div class="card">
+          <h3>{{ scheme.name }}</h3>
+          <p>{{ scheme.description }}</p>
+          <a href="{{ scheme.link }}" target="_blank">Apply Here</a>
+        </div>
+      {% endfor %}
+    {% elif request.method == 'POST' %}
+      <h3>❌ No matching scheme found for your details.</h3>
+    {% endif %}
+  </div>
+</body>
+</html>

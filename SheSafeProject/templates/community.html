@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Womens of India</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #000;
+      color: white;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 90%;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 700%; 
+    }
+
+    .slide {
+      width: 100vw;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+    }
+
+    .btn-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 10;
+    }
+
+    #prev {
+      left: 10px;
+    }
+
+    #next {
+      right: 10px;
+    }
+
+    .dots {
+      margin-top: 15px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      background-color: gray;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: white;
+    }
+
+    p {
+  margin: 15px auto;
+  width: 80%;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
+  background: linear-gradient(to right, #f7c1fc, #a5f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+
+  </style>
+</head>
+<body>
+
+  <h2>WOMENS OF INDIA</h2>
+
+  <p>
+  From parliament to the judiciary, from governance to revolution these iconic women shattered ceilings and rewrote history. They weren’t just “firsts.” They were forever. India salutes their legacy.
+</p>
+
+  <div class="slider-container">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="{{ url_for('static', filename='images/1.jpg')}}" /></div>
+      <div class="slide"><img src="{{ url_for('static', filename='images/2.jpg')}}" /></div>
+      <div class="slide"><img src="{{ url_for('static', filename='images/3.jpg')}}" /></div>
+      <div class="slide"><img src="{{ url_for('static', filename='images/4.jpg')}}" /></div>
+      <div class="slide"><img src="{{ url_for('static', filename='images/5.jpg')}}" /></div>
+      <div class="slide"><img src="{{ url_for('static', filename='images/6.jpg')}}" /></div>
+      <div class="slide"><img src="{{ url_for('static', filename='images/7.jpg')}}" /></div>
+    </div>
+
+    <button class="btn-nav" id="prev">&#10094;</button>
+    <button class="btn-nav" id="next">&#10095;</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+
+  <script>
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+    const dotsContainer = document.getElementById('dots');
+
+    let index = 0;
+
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    const updateDots = () => {
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    };
+
+    const goToSlide = (i) => {
+      index = i;
+      slides.style.transform = `translateX(-${index * 100}vw)`;
+      updateDots();
+    };
+
+    document.getElementById('next').onclick = () => {
+      index = (index + 1) % totalSlides;
+      goToSlide(index);
+    };
+
+    document.getElementById('prev').onclick = () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      goToSlide(index);
+    };
+  </script>
+
+</body>
+</html>

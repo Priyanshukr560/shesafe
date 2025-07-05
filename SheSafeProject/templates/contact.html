@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheSafe Forms</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/contact.css')}}" />
+  </head>
+<body>
+  <div class="container">
+    
+    <h1>Welcome to SheSafe</h1>
+    <div class="buttons">
+      <button onclick="showForm('contact')">Contact Us</button>
+      <button onclick="showForm('report')">Report Incident</button>
+      <button onclick="showForm('feedback')">Feedback</button>
+    </div><form id="contact" action="https://formsubmit.co/from.iitpatna@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Email ID" required />
+  <input type="text" name="mobile" placeholder="Mobile Number (optional)" />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <label><input type="checkbox" required /> Willingly sharing the details</label>
+  <input type="submit" value="Submit" />
+</form>
+
+<form id="report" action="https://formsubmit.co/from.iitpatna@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="text" name="state" placeholder="State" required />
+  <input type="text" name="pincode" placeholder="Pincode" required />
+  <input type="date" name="date" required />
+  <textarea name="description" placeholder="Describe the Incident" required></textarea>
+  <label><input type="checkbox" required /> Willingly sharing the details</label>
+  <input type="submit" value="Submit" />
+</form>
+
+<form id="feedback" action="https://formsubmit.co/from.iitpatna@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Email ID" required />
+  <select name="rating" required>
+    <option value="">Rate Us</option>
+    <option value="1">1 - Bad</option>
+    <option value="2">2- Poor</option>
+    <option value="3">3- Okay</option>
+    <option value="4">4- Good</option>
+    <option value="5">5 - Excellent</option>
+  </select>
+  <textarea name="feedback" placeholder="Your Feedback" required></textarea>
+  <input type="submit" value="Submit" />
+</form>
+
+  </div>
+  <script src="{{ url_for('static',filename='js/contact.js')}}"></script>
+</body>
+</html>
